@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+{% block content %}
+		{% if object %}
+		<div class="text-center">
+			<h1>Shortening Result</h1>
+			<br>
+			<p>Original_URL : {{object.url}}</p>
+			<div>
+				<input id='short-link' type="text" value="{{object.get_short_url}}">
+		    </div>
+    		<br>
+		    <a href="/">처음으로</a>
+		</div>
+
+	{% endif %}
+{% endblock %}
